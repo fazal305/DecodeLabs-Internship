@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A vanilla JavaScript interactive elements lab with theme toggle, counter, FAQ accordion, character counter, palette generator, and show/hide cards.">
+
+    <title>JS Interactive Lab | DecodeLabs</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="canonical" href="https://fazal305.github.io/decodelabs-interactive-web-elements/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fazal305.github.io/decodelabs-interactive-web-elements/">
+    <meta property="og:title" content="JS Interactive Lab | DecodeLabs">
+    <meta property="og:description"
+        content="A vanilla JavaScript interactive elements lab with theme toggle, counter, FAQ accordion, character counter, palette generator, and show/hide cards.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JS Interactive Lab | DecodeLabs">
+    <meta name="twitter:description"
+        content="A vanilla JavaScript interactive elements lab with theme toggle, counter, FAQ accordion, character counter, palette generator, and show/hide cards.">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <p class="brand-label">Fazal Labs · BrowserLab</p>
+            <h1>JS Interactive Lab</h1>
+
+            <p>
+                DecodeLabs Project 3 — Interactive Web Elements
+            </p>
+
+            <button class="js-theme-toggle theme-toggle-btn" type="button" aria-pressed="false">
+                🌙 Switch to Dark
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-card" aria-labelledby="counter-heading">
+            <h2 id="counter-heading">Dynamic Counter</h2>
+            <p>
+                Demonstrates state updates and DOM manipulation.
+            </p>
+
+            <div class="counter-wrapper">
+                <button class="js-decrement-btn counter-btn" type="button" aria-label="Decrease counter">
+                    -
+                </button>
+
+                <div class="js-counter-display counter-display" aria-live="polite">
+                    0
+                </div>
+
+                <button class="js-increment-btn counter-btn" type="button" aria-label="Increase counter">
+                    +
+                </button>
+            </div>
+
+            <button class="js-reset-btn" type="button">
+                Reset
+            </button>
+        </section>
+
+        <section class="section-card" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">JavaScript FAQ</h2>
+            <p>
+                Click a question to reveal the answer.
+            </p>
+
+            <div class="faq-item">
+                <button class="js-faq-btn faq-question" type="button">
+                    What is JavaScript?
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    JavaScript adds behaviour and interactivity to web pages.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="js-faq-btn faq-question" type="button">
+                    What is the DOM?
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    The DOM is the browser's object representation of HTML.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="js-faq-btn faq-question" type="button">
+                    What is an event?
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    An event is something that happens in the browser such as a click.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="js-faq-btn faq-question" type="button">
+                    Why use addEventListener?
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    It separates JavaScript behaviour from HTML structure.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="js-faq-btn faq-question" type="button">
+                    What is localStorage?
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    localStorage allows data to persist after page refreshes.
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" aria-labelledby="character-counter-heading">
+            <h2 id="character-counter-heading">Live Character Counter</h2>
+
+            <label class="form-label" for="message-input">Message</label>
+
+            <textarea id="message-input" class="js-message-input" maxlength="150"
+                placeholder="Write your message..."></textarea>
+
+            <p class="js-char-count" aria-live="polite">
+                0 / 150 characters
+            </p>
+
+            <p class="js-warning-message" aria-live="polite"></p>
+        </section>
+
+        <section class="section-card" aria-labelledby="palette-heading">
+            <h2 id="palette-heading">Colour Palette Generator</h2>
+            <p>
+                Generate random hex colours and click any swatch to copy it.
+            </p>
+
+            <button class="js-generate-btn" type="button">
+                Generate Palette
+            </button>
+
+            <div class="js-palette-container" aria-label="Generated colour palette"></div>
+
+            <p class="js-copy-message" aria-live="polite"></p>
+        </section>
+
+        <section class="section-card" aria-labelledby="toggle-heading">
+            <h2 id="toggle-heading">Show / Hide Sections</h2>
+
+            <div class="toggle-card">
+                <button class="js-card-toggle" type="button">
+                    Show Details
+                </button>
+
+                <div class="card-content is-hidden">
+                    HTML provides the structure of a webpage.
+                </div>
+            </div>
+
+            <div class="toggle-card">
+                <button class="js-card-toggle" type="button">
+                    Show Details
+                </button>
+
+                <div class="card-content is-hidden">
+                    CSS controls appearance and layout.
+                </div>
+            </div>
+
+            <div class="toggle-card">
+                <button class="js-card-toggle" type="button">
+                    Show Details
+                </button>
+
+                <div class="card-content is-hidden">
+                    JavaScript controls behaviour and interaction.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            Built by Fazal Abbas for the DecodeLabs Frontend Development Internship 2026.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
