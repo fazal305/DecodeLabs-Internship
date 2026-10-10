@@ -40,7 +40,7 @@ Each project is kept in its own repository so the code, README, and live demo ca
 Fazal Abbas
 
 - GitHub: https://github.com/fazal305
-- LinkedIn: https://www.linkedin.com/in/fazal-abbas-4653dg86
+- LinkedIn: https://www.linkedin.com/in/fazal-abbas879/
 
 ## License
 
